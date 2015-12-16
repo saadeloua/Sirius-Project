@@ -1,0 +1,462 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:description_2="http://www.eclipse.org/sirius/table/description/1.1.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/diagram/description/tool/1.1.0" xmlns:tool_1="http://www.eclipse.org/sirius/description/tool/1.1.0" name="angular" version="10.1.0.201507271600">
+  <ownedViewpoints name="Architecture" modelFileExtension="xmi">
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="ClassDiagram" domainClass="angular.Module" enablePopupBars="true">
+      <metamodel href="../../fr.univnantes.alma.angular/model/angular.ecore#/"/>
+      <defaultLayer name="Default">
+        <edgeMappings name="Extends" deletionDescription="//@ownedViewpoints[name='Architecture']/@ownedRepresentations[name='ClassDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='Delete%20Extends']" sourceMapping="//@ownedViewpoints[name='Architecture']/@ownedRepresentations[name='ClassDiagram']/@defaultLayer/@containerMappings[name='CD_Class']" targetMapping="//@ownedViewpoints[name='Architecture']/@ownedRepresentations[name='ClassDiagram']/@defaultLayer/@containerMappings[name='CD_Class']" targetFinderExpression="feature:extends">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <containerMappings name="CD_Class" deletionDescription="//@ownedViewpoints[name='Architecture']/@ownedRepresentations[name='ClassDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='Delete%20Class']" labelDirectEdit="//@ownedViewpoints[name='Architecture']/@ownedRepresentations[name='ClassDiagram']/@defaultLayer/@toolSections.1/@ownedTools[name='Classifier%20Direct%20Edit']" domainClass="angular.ESClass">
+          <subNodeMappings name="Field" deletionDescription="//@ownedViewpoints[name='Architecture']/@ownedRepresentations[name='ClassDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='Delete%20Field']" labelDirectEdit="//@ownedViewpoints[name='Architecture']/@ownedRepresentations[name='ClassDiagram']/@defaultLayer/@toolSections.1/@ownedTools[name='Field%20Direct%20Edit']" semanticCandidatesExpression="feature:eAllContents" domainClass="angular.Field">
+            <style xsi:type="style:SquareDescription" borderLineStyle="dot" labelExpression="aql:self.type +'  '+ self.name" labelPosition="node" resizeKind="NSEW" color="//@userColorsPalettes[name='Default%20Colors']/@entries[name='Default%20Class']">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </style>
+          </subNodeMappings>
+          <subNodeMappings name="Function" deletionDescription="//@ownedViewpoints[name='Architecture']/@ownedRepresentations[name='ClassDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='Delete%20Function']" labelDirectEdit="//@ownedViewpoints[name='Architecture']/@ownedRepresentations[name='ClassDiagram']/@defaultLayer/@toolSections.1/@ownedTools[name='Function%20Direct%20Edit']" semanticCandidatesExpression="feature:eAllContents" domainClass="angular.Function">
+            <style xsi:type="style:SquareDescription" borderLineStyle="dot" labelExpression="aql: self.type+'  '+self.name+'('+self.parameters->collect(p | p.type+' '+p.name)->sep(', ')+')'" labelPosition="node" resizeKind="NSEW" color="//@userColorsPalettes[name='Default%20Colors']/@entries[name='Default%20Class']">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </style>
+          </subNodeMappings>
+          <style xsi:type="style:FlatContainerStyleDescription" arcWidth="5" arcHeight="5" borderSizeComputationExpression="2" roundedCorner="true" widthComputationExpression="15" heightComputationExpression="12" foregroundColor="//@userColorsPalettes[name='Default%20Colors']/@entries[name='Default%20Class']">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+          </style>
+          <conditionnalStyles predicateExpression="feature:abstract">
+            <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" foregroundColor="//@userColorsPalettes[name='Default%20Colors']/@entries[name='Abstract%20Class']">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            </style>
+          </conditionnalStyles>
+        </containerMappings>
+        <toolSections name="Elements">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="New ESClass" forceRefresh="true" containerMappings="//@ownedViewpoints[name='Architecture']/@ownedRepresentations[name='ClassDiagram']/@defaultLayer/@containerMappings[name='CD_Class']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="angular.ESClass" referenceName="moduleElements" variableName="NewClass">
+                  <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:NewClass">
+                    <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="NewClass"/>
+                  </subModelOperations>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="New Field" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='Architecture']/@ownedRepresentations[name='ClassDiagram']/@defaultLayer/@containerMappings[name='CD_Class']/@subNodeMappings[name='Field']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="angular.Field" referenceName="fields" variableName="field">
+                  <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:field">
+                    <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="newField"/>
+                    <subModelOperations xsi:type="tool_1:SetValue" featureName="type" valueExpression="String"/>
+                  </subModelOperations>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="New Function" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='Architecture']/@ownedRepresentations[name='ClassDiagram']/@defaultLayer/@containerMappings[name='CD_Class']/@subNodeMappings[name='Function']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="angular.Function" referenceName="functions" variableName="function">
+                  <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:function">
+                    <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="newFunction"/>
+                    <subModelOperations xsi:type="tool_1:SetValue" featureName="type" valueExpression="String"/>
+                  </subModelOperations>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Extends" forceRefresh="true" edgeMappings="//@ownedViewpoints[name='Architecture']/@ownedRepresentations[name='ClassDiagram']/@defaultLayer/@edgeMappings[name='Extends']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:source">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="extends" valueExpression="var:target"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:DeleteElementDescription" name="Delete Extends" forceRefresh="true">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <containerView name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:element">
+                <subModelOperations xsi:type="tool_1:Unset" featureName="extends" elementExpression="aql:elementView.targetNode.target"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:DeleteElementDescription" name="Delete Field" forceRefresh="true">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <containerView name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:containerView.target">
+                <subModelOperations xsi:type="tool_1:Unset" featureName="fields" elementExpression="var:element"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:DeleteElementDescription" name="Delete Function">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <containerView name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:containerView.target">
+                <subModelOperations xsi:type="tool_1:Unset" featureName="functions" elementExpression="var:element"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:DeleteElementDescription" name="Delete Class">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <containerView name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:element">
+                <subModelOperations xsi:type="tool_1:RemoveElement"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+        <toolSections name="Behavior Tools">
+          <ownedTools xsi:type="tool:DirectEditLabel" name="Classifier Direct Edit" forceRefresh="true">
+            <mask mask="{0}"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="aql:self.toCamelCase(arg0)"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:DirectEditLabel" name="Field Direct Edit" forceRefresh="true">
+            <mask mask="{0}"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="var:arg0"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:DirectEditLabel" name="Function Direct Edit">
+            <mask mask="{0}"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="aql:arg0"/>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+      </defaultLayer>
+    </ownedRepresentations>
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="ExplorerDiagram" domainClass="angular.Container" enablePopupBars="true">
+      <defaultLayer name="Default">
+        <nodeMappings name="Folder" semanticCandidatesExpression="feature:folders" doubleClickDescription="//@ownedViewpoints[name='Architecture']/@ownedRepresentations[name='ExplorerDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='tool']" domainClass="angular.Folder">
+          <style xsi:type="style:WorkspaceImageDescription" borderLineStyle="dot" sizeComputationExpression="15" labelPosition="node" resizeKind="NSEW" workspacePath="/fr.univnantes.alma.angular.design/icons/f_documents_512x512.png">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+          <conditionnalStyles predicateExpression="aql:self.pages.size() + self.modules.size() = 0">
+            <style xsi:type="style:WorkspaceImageDescription" borderSizeComputationExpression="15" sizeComputationExpression="15" labelPosition="node" resizeKind="NSEW" workspacePath="/fr.univnantes.alma.angular.design/icons/folder_512x512.png">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </style>
+          </conditionnalStyles>
+        </nodeMappings>
+        <nodeMappings name="Module" detailDescriptions="//@ownedViewpoints[name='Architecture']/@ownedRepresentations[name='ExplorerDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='tool']" semanticCandidatesExpression="feature:modules" domainClass="angular.Module">
+          <style xsi:type="style:WorkspaceImageDescription" labelExpression="feature:path" sizeComputationExpression="15" labelPosition="node" resizeKind="NSEW" workspacePath="/fr.univnantes.alma.angular.design/icons/js_512x512.png">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="Page" semanticCandidatesExpression="feature:pages" domainClass="angular.HTML">
+          <style xsi:type="style:WorkspaceImageDescription" labelExpression="feature:path" sizeComputationExpression="15" labelPosition="node" resizeKind="NSEW" workspacePath="/fr.univnantes.alma.angular.design/icons/html_512x512.png">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </nodeMappings>
+        <toolSections name="Explorer">
+          <ownedTools xsi:type="tool:DiagramCreationDescription" name="tool" diagramDescription="//@ownedViewpoints[name='Architecture']/@ownedRepresentations[name='ClassDiagram']">
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:containerView">
+                <subModelOperations xsi:type="tool:CreateView" mapping="//@ownedViewpoints[name='Architecture']/@ownedRepresentations[name='ExplorerDiagram']/@defaultLayer/@nodeMappings[name='Module']" containerViewExpression="var:containerView"/>
+              </firstModelOperations>
+            </initialOperation>
+            <containerViewVariable name="containerView"/>
+            <representationNameVariable name="diagramName"/>
+          </ownedTools>
+          <ownedTools xsi:type="tool:DoubleClickDescription" name="tool" mappings="//@ownedViewpoints[name='Architecture']/@ownedRepresentations[name='ExplorerDiagram']/@defaultLayer/@nodeMappings[name='Folder']">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:Navigation" createIfNotExistent="true" diagramDescription="//@ownedViewpoints[name='Architecture']/@ownedRepresentations[name='ExplorerDiagram']"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="New Folder" nodeMappings="//@ownedViewpoints[name='Architecture']/@ownedRepresentations[name='ExplorerDiagram']/@defaultLayer/@nodeMappings[name='Folder']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="angular.Folder" referenceName="folders"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="New Page" nodeMappings="//@ownedViewpoints[name='Architecture']/@ownedRepresentations[name='ExplorerDiagram']/@defaultLayer/@nodeMappings[name='Page']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="angular.HTML" referenceName="pages"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="New Module" nodeMappings="//@ownedViewpoints[name='Architecture']/@ownedRepresentations[name='ExplorerDiagram']/@defaultLayer/@nodeMappings[name='Module']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="angular.Module" referenceName="modules"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+      </defaultLayer>
+    </ownedRepresentations>
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="ComponentDiagram" domainClass="angular.Folder" enablePopupBars="true">
+      <defaultLayer name="Default">
+        <edgeMappings name="RelationController" deletionDescription="//@ownedViewpoints[name='Architecture']/@ownedRepresentations[name='ComponentDiagram']/@defaultLayer/@toolSections.2/@ownedTools[name='Delete%20Dependencies']" sourceMapping="//@ownedViewpoints[name='Architecture']/@ownedRepresentations[name='ComponentDiagram']/@defaultLayer/@containerMappings[name='Module']/@subNodeMappings[name='NgController']" targetMapping="//@ownedViewpoints[name='Architecture']/@ownedRepresentations[name='ComponentDiagram']/@defaultLayer/@containerMappings[name='Module']/@subNodeMappings[name='NgService']" targetFinderExpression="feature:dependencies">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="RelationDirective" deletionDescription="//@ownedViewpoints[name='Architecture']/@ownedRepresentations[name='ComponentDiagram']/@defaultLayer/@toolSections.2/@ownedTools[name='Delete%20Dependencies']" sourceMapping="//@ownedViewpoints[name='Architecture']/@ownedRepresentations[name='ComponentDiagram']/@defaultLayer/@containerMappings[name='Module']/@subNodeMappings[name='NgDirective']" targetMapping="//@ownedViewpoints[name='Architecture']/@ownedRepresentations[name='ComponentDiagram']/@defaultLayer/@containerMappings[name='Module']/@subNodeMappings[name='NgService']" targetFinderExpression="feature:dependencies">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="RelationDC" deletionDescription="//@ownedViewpoints[name='Architecture']/@ownedRepresentations[name='ComponentDiagram']/@defaultLayer/@toolSections.2/@ownedTools[name='Remove%20Relation%20Controller']" sourceMapping="//@ownedViewpoints[name='Architecture']/@ownedRepresentations[name='ComponentDiagram']/@defaultLayer/@containerMappings[name='Module']/@subNodeMappings[name='NgDirective']" targetMapping="//@ownedViewpoints[name='Architecture']/@ownedRepresentations[name='ComponentDiagram']/@defaultLayer/@containerMappings[name='Module']/@subNodeMappings[name='NgController']" targetFinderExpression="feature:controller">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='purple']"/>
+            <centerLabelStyleDescription>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <containerMappings name="Module" label="Module" deletionDescription="//@ownedViewpoints[name='Architecture']/@ownedRepresentations[name='ComponentDiagram']/@defaultLayer/@toolSections.1/@ownedTools[name='DeleteModule']" semanticCandidatesExpression="feature:modules" domainClass="angular.Module">
+          <subNodeMappings name="NgService" deletionDescription="//@ownedViewpoints[name='Architecture']/@ownedRepresentations[name='ComponentDiagram']/@defaultLayer/@toolSections.1/@ownedTools[name='DeleteNgService']" semanticCandidatesExpression="feature:moduleElements" domainClass="angular.NgService">
+            <style xsi:type="style:BundledImageDescription" labelPosition="node" resizeKind="NSEW">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+            </style>
+          </subNodeMappings>
+          <subNodeMappings name="NgDirective" deletionDescription="//@ownedViewpoints[name='Architecture']/@ownedRepresentations[name='ComponentDiagram']/@defaultLayer/@toolSections.1/@ownedTools[name='DeleteNgDirective']" semanticCandidatesExpression="feature:moduleElements" domainClass="angular.NgDirective">
+            <style xsi:type="style:BundledImageDescription" labelPosition="node" resizeKind="NSEW">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_chocolate']"/>
+            </style>
+          </subNodeMappings>
+          <subNodeMappings name="NgController" deletionDescription="//@ownedViewpoints[name='Architecture']/@ownedRepresentations[name='ComponentDiagram']/@defaultLayer/@toolSections.1/@ownedTools[name='DeleteNgController']" semanticCandidatesExpression="feature:moduleElements" domainClass="angular.NgController">
+            <style xsi:type="style:BundledImageDescription" labelPosition="node" resizeKind="NSEW">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='yellow']"/>
+            </style>
+          </subNodeMappings>
+          <subNodeMappings name="NgModule" deletionDescription="//@ownedViewpoints[name='Architecture']/@ownedRepresentations[name='ComponentDiagram']/@defaultLayer/@toolSections.1/@ownedTools[name='DeleteNgModule']" semanticCandidatesExpression="feature:moduleElements" domainClass="angular.NgModule">
+            <style xsi:type="style:BundledImageDescription" labelPosition="node" resizeKind="NSEW">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='red']"/>
+            </style>
+          </subNodeMappings>
+          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelExpression="feature:path">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+          </style>
+        </containerMappings>
+        <toolSections name="Add">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="NewNgModule" label="NewNgModule" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='Architecture']/@ownedRepresentations[name='ComponentDiagram']/@defaultLayer/@containerMappings[name='Module']/@subNodeMappings[name='NgModule']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="angular.NgModule" referenceName="moduleElements">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="New Ng Module"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="AddNgController" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='Architecture']/@ownedRepresentations[name='ComponentDiagram']/@defaultLayer/@containerMappings[name='Module']/@subNodeMappings[name='NgController']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="angular.NgController" referenceName="moduleElements">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="New Ng Controller"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="AddNgDirective" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='Architecture']/@ownedRepresentations[name='ComponentDiagram']/@defaultLayer/@containerMappings[name='Module']/@subNodeMappings[name='NgDirective']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="angular.NgDirective" referenceName="moduleElements">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="New Ng Directive"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="AddNgService" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='Architecture']/@ownedRepresentations[name='ComponentDiagram']/@defaultLayer/@containerMappings[name='Module']/@subNodeMappings[name='NgService']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="angular.NgService" referenceName="moduleElements">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="New Ng Service"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="Add Module" containerMappings="//@ownedViewpoints[name='Architecture']/@ownedRepresentations[name='ComponentDiagram']/@defaultLayer/@containerMappings[name='Module']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="angular.Module" referenceName="modules">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="path" valueExpression="New Module"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+        <toolSections name="Remove">
+          <ownedTools xsi:type="tool:DeleteElementDescription" name="DeleteNgModule" forceRefresh="true">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <containerView name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:containerView.target">
+                <subModelOperations xsi:type="tool_1:Unset" featureName="moduleElements" elementExpression="var:element"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:DeleteElementDescription" name="DeleteNgController" forceRefresh="true">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <containerView name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:containerView.target">
+                <subModelOperations xsi:type="tool_1:Unset" featureName="moduleElements" elementExpression="var:element"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:DeleteElementDescription" name="DeleteNgService" forceRefresh="true">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <containerView name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:containerView.target">
+                <subModelOperations xsi:type="tool_1:Unset" featureName="moduleElements" elementExpression="var:element"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:DeleteElementDescription" name="DeleteNgDirective" forceRefresh="true">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <containerView name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:containerView.target">
+                <subModelOperations xsi:type="tool_1:Unset" featureName="moduleElements" elementExpression="var:element"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:DeleteElementDescription" name="DeleteModule">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <containerView name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:element">
+                <subModelOperations xsi:type="tool_1:RemoveElement"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+        <toolSections name="Link">
+          <ownedTools xsi:type="tool:DeleteElementDescription" name="Delete Dependencies">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <containerView name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:element">
+                <subModelOperations xsi:type="tool_1:Unset" featureName="dependencies" elementExpression="aql:elementView.targetNode.target"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Dependencies" edgeMappings="//@ownedViewpoints[name='Architecture']/@ownedRepresentations[name='ComponentDiagram']/@defaultLayer/@edgeMappings[name='RelationDirective'] //@ownedViewpoints[name='Architecture']/@ownedRepresentations[name='ComponentDiagram']/@defaultLayer/@edgeMappings[name='RelationController']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:source">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="dependencies" valueExpression="var:target"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:DeleteElementDescription" name="Remove Relation Controller">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <containerView name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:element">
+                <subModelOperations xsi:type="tool_1:Unset" featureName="controller" elementExpression="aql:elementView.targetNode.target"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="ControllerRelation" edgeMappings="//@ownedViewpoints[name='Architecture']/@ownedRepresentations[name='ComponentDiagram']/@defaultLayer/@edgeMappings[name='RelationDC']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:source">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="controller" valueExpression="var:target"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+      </defaultLayer>
+    </ownedRepresentations>
+    <ownedJavaExtensions qualifiedClassName="fr.univnantes.alma.angular.internal.services.NamingServices"/>
+  </ownedViewpoints>
+  <ownedViewpoints name="Review" modelFileExtension="xmi">
+    <ownedRepresentations xsi:type="description_2:EditionTableDescription" name="M Table" showOnStartup="true" domainClass="angular.Module">
+      <ownedLineMappings name="ESClassLine" domainClass="angular.ESClass" semanticCandidatesExpression="feature:moduleElements" headerLabelExpression="feature:name"/>
+      <ownedColumnMappings name="Column Name" headerLabelExpression="Name" featureName="name"/>
+      <ownedColumnMappings name="Abstract Column" headerLabelExpression="Abstract" featureName="abstract"/>
+      <ownedColumnMappings name="Fields Column" headerLabelExpression="Fields" featureName="fields"/>
+      <ownedColumnMappings name="Functions Column" headerLabelExpression="Functions" featureName="functions"/>
+    </ownedRepresentations>
+  </ownedViewpoints>
+  <userColorsPalettes name="Default Colors">
+    <entries xsi:type="description:UserFixedColor" red="210" green="228" blue="252" name="Default Class"/>
+    <entries xsi:type="description:UserFixedColor" red="240" green="216" blue="216" name="Abstract Class"/>
+  </userColorsPalettes>
+</description:Group>

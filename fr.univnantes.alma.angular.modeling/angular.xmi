@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<angular:Project xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:angular="http://www.univnantes.fr/alma/angular" xsi:schemaLocation="http://www.univnantes.fr/alma/angular ../fr.univnantes.alma.angular/model/angular.ecore" name="AngularHelloWorld">
+  <folders name="App">
+    <modules path="app/common.js">
+      <moduleElements xsi:type="angular:NgService" name="Service" esClass="//@folders.0/@modules.1/@moduleElements.1"/>
+      <moduleElements xsi:type="angular:NgController" name="Controller" esClass="//@folders.0/@modules.1/@moduleElements.1" dependencies="//@folders.0/@modules.0/@moduleElements.0"/>
+      <moduleElements xsi:type="angular:NgDirective" name="Directive" esClass="//@folders.0/@modules.1/@moduleElements.1" controller="//@folders.0/@modules.0/@moduleElements.1" dependencies="//@folders.0/@modules.0/@moduleElements.0"/>
+    </modules>
+    <modules path="app/sirius.js">
+      <moduleElements xsi:type="angular:ESClass" name="AbstractSirius" abstract="true"/>
+      <moduleElements xsi:type="angular:ESClass" name="Sirius" extends="//@folders.0/@modules.1/@moduleElements.0">
+        <fields name="what" type="String"/>
+        <functions name="add" type="Type">
+          <parameters name="what" type="String"/>
+        </functions>
+      </moduleElements>
+      <moduleElements xsi:type="angular:ESClass" name="SetSirius">
+        <fields name="NewInstance " type="Sirius"/>
+      </moduleElements>
+      <moduleElements xsi:type="angular:NgDirective" name="New Ng Directive" controller="//@folders.0/@modules.1/@moduleElements.6" dependencies="//@folders.0/@modules.1/@moduleElements.5"/>
+      <moduleElements xsi:type="angular:NgModule" name="New Ng Module"/>
+      <moduleElements xsi:type="angular:NgService" name="New Ng Service"/>
+      <moduleElements xsi:type="angular:NgController" name="New Ng Controller" dependencies="//@folders.0/@modules.1/@moduleElements.5"/>
+      <moduleElements xsi:type="angular:ESClass" name="HelloWorld" extends="//@folders.0/@modules.1/@moduleElements.0">
+        <fields name="newField" type="String"/>
+        <functions name="newFunction" type="String"/>
+      </moduleElements>
+    </modules>
+    <modules path="folder/void.js">
+      <moduleElements xsi:type="angular:NgModule" name="New Ng Module"/>
+      <moduleElements xsi:type="angular:NgController" name="New Ng Controller" dependencies="//@folders.0/@modules.2/@moduleElements.3"/>
+      <moduleElements xsi:type="angular:NgDirective" name="New Ng Directive" controller="//@folders.0/@modules.2/@moduleElements.1" dependencies="//@folders.0/@modules.2/@moduleElements.3"/>
+      <moduleElements xsi:type="angular:NgService" name="New Ng Service"/>
+    </modules>
+    <pages path="index.html"/>
+    <pages path="login.html"/>
+    <pages path="back.html"/>
+    <pages path="logout.html"/>
+  </folders>
+</angular:Project>
